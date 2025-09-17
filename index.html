@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>MineFC — Minecraft Server</title>
+		<meta name="description" content="Giới thiệu Minecraft server MineFC: trải nghiệm sinh tồn, mini-games và cộng đồng Việt Nam thân thiện." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<noscript>
+			<div class="noscript">Trang này cần JavaScript để hiển thị hiệu ứng.</div>
+		</noscript>
+
+		<!-- Loading Animation -->
+		<div id="loader" aria-hidden="true" role="status">
+			<div class="loader-inner">
+				<svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+					<defs>
+						<linearGradient id="lg" x1="0" x2="1">
+							<stop offset="0%" stop-color="#00d1ff" />
+							<stop offset="100%" stop-color="#00ff88" />
+						</linearGradient>
+					</defs>
+					<rect x="8" y="8" width="48" height="48" rx="8" fill="url(#lg)"/>
+					<path d="M20 40 L32 20 L44 40 Z" fill="#111" opacity="0.9" />
+				</svg>
+				<div class="bar"><span></span></div>
+				<p>Đang tải thế giới…</p>
+			</div>
+		</div>
+
+		<!-- Page transition overlay -->
+		<div class="page-overlay" aria-hidden="true"></div>
+
+		<header class="site-header" id="top">
+			<div class="container nav-wrap">
+				<a class="brand" href="#home" data-nav>
+					<span class="brand-icon">⛏️</span>
+					<span class="brand-name">MineFC</span>
+				</a>
+
+				<nav class="site-nav" aria-label="Chính">
+					<ul>
+						<li><a href="#home" data-nav>Trang chủ</a></li>
+						<li><a href="#features" data-nav>Tính năng</a></li>
+						<li><a href="#community" data-nav>Cộng đồng</a></li>
+						<li><a href="#join" class="btn btn-primary" data-nav>Tham gia</a></li>
+					</ul>
+				</nav>
+
+				<button class="menu-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu">
+					<span></span><span></span><span></span>
+				</button>
+			</div>
+
+			<nav id="mobile-menu" class="mobile-menu" hidden>
+				<a href="#home" data-nav>Trang chủ</a>
+				<a href="#features" data-nav>Tính năng</a>
+				<a href="#community" data-nav>Cộng đồng</a>
+				<a href="#join" data-nav>Tham gia</a>
+			</nav>
+		</header>
+
+		<main id="home" class="page">
+			<!-- Animated Background -->
+			<div class="animated-bg">
+				<div class="particles" aria-hidden="true"></div>
+			</div>
+
+			<!-- Hero with Parallax Layers -->
+			<section class="hero section reveal">
+				<div class="parallax" aria-hidden="true">
+					<div class="layer layer-0" data-depth="0.02"></div>
+					<div class="layer layer-1" data-depth="0.06"></div>
+					<div class="layer layer-2" data-depth="0.12"></div>
+				</div>
+				<div class="container hero-inner">
+					<h1>
+						<span class="shimmer">Chào mừng đến với</span>
+						<strong>MineFC Server</strong>
+					</h1>
+					<p>Khám phá thế giới Minecraft Việt với chế độ Sinh tồn, SkyBlock, Mini‑Games và nhiều sự kiện hấp dẫn.</p>
+					<div class="cta">
+						<button class="btn btn-primary" data-copy-ip data-ripple data-ip="play.minefc.vn">Sao chép IP: play.minefc.vn</button>
+						<a class="btn btn-ghost" href="#features" data-nav data-ripple>Xem tính năng</a>
+					</div>
+					<div class="stats">
+						<div class="stat">
+							<span class="num" data-count="128">0</span>
+							<span class="label">Người chơi tối đa</span>
+						</div>
+						<div class="stat">
+							<span class="num live" data-live>--</span>
+							<span class="label">Đang trực tuyến</span>
+						</div>
+						<div class="stat">
+							<span class="num" data-count="24">0</span>
+							<span class="label">Sự kiện/tháng</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Features -->
+			<section id="features" class="section section-alt reveal">
+				<div class="container">
+					<h2>Tính năng nổi bật</h2>
+					<div class="grid features-grid">
+						<article class="card feature" tabindex="0">
+							<div class="icon">
+								<svg viewBox="0 0 64 64" class="ico-sword" aria-hidden="true">
+									<path d="M10 54 L26 38 L30 42 L14 58 Z" class="hilt" />
+									<path d="M28 36 L54 10 L58 14 L32 40 Z" class="blade" />
+								</svg>
+							</div>
+							<h3>PvP Cân Bằng</h3>
+							<p>Độ trễ thấp, hit‑reg mượt, kit đa dạng. Cạnh tranh công bằng và thú vị.</p>
+						</article>
+						<article class="card feature" tabindex="0">
+							<div class="icon">
+								<svg viewBox="0 0 64 64" class="ico-shield" aria-hidden="true">
+									<path d="M32 8 L52 16 V30 C52 44 42 54 32 58 C22 54 12 44 12 30 V16 Z" class="shield"/>
+								</svg>
+							</div>
+							<h3>Chống Hack & Lag</h3>
+							<p>Hệ thống anti‑cheat & tối ưu máy chủ giúp trải nghiệm ổn định, mượt mà.</p>
+						</article>
+						<article class="card feature" tabindex="0">
+							<div class="icon">
+								<svg viewBox="0 0 64 64" class="ico-pickaxe" aria-hidden="true">
+									<path d="M8 20 L40 20 L40 24 L12 24 Z" class="head"/>
+									<path d="M32 22 L42 32 L38 36 L28 26 Z" class="tie"/>
+									<rect x="36" y="30" width="6" height="26" rx="3" class="stick"/>
+								</svg>
+							</div>
+							<h3>Kinh Tế & Nhiệm Vụ</h3>
+							<p>Chợ, đấu giá, nhiệm vụ hằng ngày và rank để bạn luôn có mục tiêu mới.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Community -->
+			<section id="community" class="section reveal">
+				<div class="container two-col">
+					<div>
+						<h2>Cộng đồng thân thiện</h2>
+						<p>Tham gia Discord để trò chuyện, tìm đồng đội và nhận thông báo sự kiện sớm nhất.</p>
+						<div class="cta">
+							<a class="btn btn-primary" data-ripple href="#join">Vào máy chủ</a>
+							<a class="btn btn-discord" data-ripple href="https://discord.com" target="_blank" rel="noopener">Discord</a>
+						</div>
+					</div>
+					<div class="illustration">
+						<svg viewBox="0 0 300 180" class="scene" aria-hidden="true">
+							<defs>
+								<linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+									<stop offset="0%" stop-color="#0e1630"/>
+									<stop offset="100%" stop-color="#152347"/>
+								</linearGradient>
+							</defs>
+							<rect width="300" height="180" fill="url(#sky)"/>
+							<g class="stars">
+								<circle cx="40" cy="30" r="1.5"/>
+								<circle cx="120" cy="20" r="1"/>
+								<circle cx="200" cy="50" r="1.2"/>
+								<circle cx="260" cy="40" r="1"/>
+							</g>
+							<rect y="140" width="300" height="40" fill="#274d2f"/>
+							<rect y="150" width="300" height="30" fill="#315c3a"/>
+							<g class="cube" transform="translate(130,110)">
+								<rect x="0" y="0" width="40" height="40" fill="#7dc36e"/>
+								<rect x="0" y="20" width="40" height="20" fill="#7a5c3d"/>
+							</g>
+						</svg>
+					</div>
+				</div>
+			</section>
+
+			<!-- Join -->
+			<section id="join" class="section section-cta reveal">
+				<div class="container center">
+					<h2>Tham gia hôm nay</h2>
+					<p>Thêm máy chủ: <code>play.minefc.vn</code> — Hỗ trợ phiên bản 1.16+.</p>
+					<div class="cta">
+						<button class="btn btn-primary" data-copy-ip data-ripple data-ip="play.minefc.vn">Sao chép IP</button>
+						<a class="btn btn-ghost" data-ripple href="#top" data-nav>Lên đầu trang</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<p>© <span id="year"></span> MineFC. Không liên kết với Mojang/ Microsoft.</p>
+			</div>
+		</footer>
+
+		<script src="js/script.js"></script>
+	</body>
+	</html>
